@@ -1,9 +1,10 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import placeholder from '../components/placeholderObject.vue'
 </script>
-
 <template>
   <main>
-    <TheWelcome />
+    <div>
+      <h1>placeholder</h1>
+    </div>
   </main>
 </template>
