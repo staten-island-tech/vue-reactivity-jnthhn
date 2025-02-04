@@ -1,3 +1,7 @@
 <script setup>
-const placeholder = [{ name: 'balls' }]
+const cones = [
+  { coneFlavor: 'vanilla', image: 'null' },
+  { coneFlavor: 'chocolate', image: 'null' },
+  { coneFlavor: 'mixed', image: 'null' },
+]
 </script>

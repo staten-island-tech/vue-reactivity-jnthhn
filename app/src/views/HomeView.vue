@@ -1,5 +1,5 @@
 <script setup>
-import placeholder from '../components/placeholderObject.vue'
+import cones from '../components/cones.vue'
 </script>
 <template>
   <main>
