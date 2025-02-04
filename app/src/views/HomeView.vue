@@ -1,5 +1,5 @@
 <script setup>
-import cones from '../components/cones.vue'
+import cones from '../components/icecreamselection.vue'
 </script>
 <template>
   <main>
