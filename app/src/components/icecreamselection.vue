@@ -1,9 +1,14 @@
 <script setup>
-const cones = [
-  { flavor: 'vanilla', image: 'null' },
-  { flavor: 'chocolate', image: 'null' },
-  { flavor: 'strawberry', image: 'null' },
-  { flavor: 'oreo', image: 'null' },
-  { flavor: 'mint chocolate chip', image: 'null' },
-]
+defineProps({
+  flavor: Object,
+})
 </script>
+
+<template>
+  <div>
+    <h2>{{ flavor.flavor }}</h2>
+    <img :src 
+  </div>
+</template>
+
+<style scoped></style>
