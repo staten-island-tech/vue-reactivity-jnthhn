@@ -7,7 +7,7 @@ defineProps({
 <template>
   <div>
     <h2>{{ flavor.flavor }}</h2>
-    <img :src 
+    <img :src="flavor.image" alt="" />
   </div>
 </template>
 
