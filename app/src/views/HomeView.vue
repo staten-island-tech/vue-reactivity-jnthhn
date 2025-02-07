@@ -10,11 +10,14 @@
 import IceCreamSelection from '../components/icecreamselection.vue'
 
 const flavors = [
-  { flavor: 'vanilla', image: 'vanilla.png' },
-  { flavor: 'chocolate', image: 'chocolate.png' },
-  { flavor: 'strawberry', image: 'strawberry.png' },
-  { flavor: 'oreo', image: 'oreo.png' },
-  { flavor: 'mint chocolate chip', image: 'mint.png' },
+  { flavor: 'Vanilla', image: 'vanilla.png' },
+  { flavor: 'Chocolate', image: 'chocolate.png' },
+  { flavor: 'Strawberry', image: 'strawberry.png' },
+  { flavor: "Cookies 'N Cream", image: 'oreo.png' },
+  { flavor: 'Mint Chocolate', image: 'mint.png' },
+  { flavor: 'Neapolitan', image: 'mixed.png' },
+  { flavor: 'Coffee', image: 'coffee.png' },
+  { flavor: 'Pistachio', image: 'pistachio.png' },
 ]
 </script>
 
@@ -24,5 +27,6 @@ const flavors = [
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
+  gap: 15px;
 }
 </style>
