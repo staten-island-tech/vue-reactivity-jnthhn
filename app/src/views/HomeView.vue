@@ -2,7 +2,7 @@
   <main>
     <div class="container">
       <!-- Cone Selection -->
-      <div class="selection-section">
+      <div class="selection-section" id="cone-selection">
         <h2>Choose your cone</h2>
         <div class="selection-grid">
           <ConeSelection
@@ -15,7 +15,7 @@
       </div>
 
       <!-- Ice Cream Selection -->
-      <div class="selection-section">
+      <div class="selection-section" id="icecream-selection">
         <h2>Choose your flavor</h2>
         <div class="selection-grid">
           <IceCreamSelection
@@ -28,7 +28,7 @@
       </div>
 
       <!-- Toppings Selection -->
-      <div class="selection-section">
+      <div class="selection-section" id="topping-selection">
         <h2>Choose your toppings</h2>
         <div class="selection-grid">
           <ToppingSelection
@@ -117,8 +117,10 @@ const resetSelections = () => {
 
 <style scoped>
 .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+  gap: 20px;
   padding: 20px;
-  margin-right: 320px; /* Make room for final creation card */
 }
 
 .selection-section {
@@ -135,5 +137,17 @@ const resetSelections = () => {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+}
+
+#cone-selection {
+  grid-column: 1;
+}
+
+#icecream-selection {
+  grid-column: 2;
+}
+
+#topping-selection {
+  grid-column: 3;
 }
 </style>
