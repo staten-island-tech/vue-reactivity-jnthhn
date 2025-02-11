@@ -1,4 +1,3 @@
-// ToppingSelection.vue
 <template>
   <div class="card" @click="emitSelection">
     <h2>{{ topping.name }}</h2>

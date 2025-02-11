@@ -1,8 +1,7 @@
 <template>
   <main>
     <div class="container">
-      <!-- Cone Selection -->
-      <div class="selection-section" id="cone-selection">
+      <div class="selection-section" id="cone-selection" style="overflow: scroll; height: 400px">
         <h2>Choose your cone</h2>
         <div class="selection-grid">
           <ConeSelection
@@ -14,8 +13,11 @@
         </div>
       </div>
 
-      <!-- Ice Cream Selection -->
-      <div class="selection-section" id="icecream-selection">
+      <div
+        class="selection-section"
+        id="icecream-selection"
+        style="overflow: scroll; height: 400px"
+      >
         <h2>Choose your flavor</h2>
         <div class="selection-grid">
           <IceCreamSelection
@@ -27,8 +29,7 @@
         </div>
       </div>
 
-      <!-- Toppings Selection -->
-      <div class="selection-section" id="topping-selection">
+      <div class="selection-section" id="topping-selection" style="overflow: scroll; height: 400px">
         <h2>Choose your toppings</h2>
         <div class="selection-grid">
           <ToppingSelection
@@ -40,7 +41,6 @@
         </div>
       </div>
 
-      <!-- Final Ice Cream Creation -->
       <FinalIceCream
         :cone="selectedCone"
         :flavor="selectedFlavor"
@@ -58,11 +58,15 @@ import ConeSelection from '../components/coneselection.vue'
 import ToppingSelection from '../components/toppingselection.vue'
 import FinalIceCream from '../components/finalicecream.vue'
 
-const cones = [
-  { type: 'Waffle Cone', image: 'waffle-cone.png' },
-  { type: 'Sugar Cone', image: 'sugar-cone.png' },
-  { type: 'Cake Cone', image: 'cake-cone.png' },
-  { type: 'Chocolate Cone', image: 'chocolate-cone.png' },
+const toppings = [
+  { name: 'Sprinkles', image: 'sprinkles.png' },
+  { name: 'Hot Fudge', image: 'hot-fudge.png' },
+  { name: 'Caramel', image: 'caramel.png' },
+  { name: 'Whipped Cream', image: 'whipped-cream.png' },
+  { name: 'Cherry', image: 'cherry.png' },
+  { name: 'Nuts', image: 'nuts.png' },
+  { name: 'M&Ms', image: 'm&ms.png' },
+  { name: 'Chocolate Chips', image: 'chocolate-chips.png' },
 ]
 
 const flavors = [
@@ -76,15 +80,11 @@ const flavors = [
   { flavor: 'Pistachio', image: 'pistachio.png' },
 ]
 
-const toppings = [
-  { name: 'Sprinkles', image: 'sprinkles.png' },
-  { name: 'Hot Fudge', image: 'hot-fudge.png' },
-  { name: 'Caramel', image: 'caramel.png' },
-  { name: 'Whipped Cream', image: 'whipped-cream.png' },
-  { name: 'Cherry', image: 'cherry.png' },
-  { name: 'Nuts', image: 'nuts.png' },
-  { name: 'M&Ms', image: 'm&ms.png' },
-  { name: 'Chocolate Chips', image: 'chocolate-chips.png' },
+const cones = [
+  { type: 'Waffle Cone', image: 'waffle-cone.png' },
+  { type: 'Sugar Cone', image: 'sugar-cone.png' },
+  { type: 'Cake Cone', image: 'cake-cone.png' },
+  { type: 'Chocolate Cone', image: 'chocolate-cone.png' },
 ]
 
 const selectedCone = ref(null)
@@ -118,13 +118,14 @@ const resetSelections = () => {
 <style scoped>
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
 }
 
 .selection-section {
   margin-bottom: 40px;
+  gap: 20px;
 }
 
 .selection-section h2 {

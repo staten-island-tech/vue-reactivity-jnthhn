@@ -1,4 +1,3 @@
-// FinalIceCream.vue
 <template>
   <div class="final-card">
     <h2>Your Ice Cream Creation</h2>

@@ -13,7 +13,7 @@ const props = defineProps({
 const emit = defineEmits(['select-flavor'])
 
 const emitSelection = () => {
-  emit('select-flavor', props.flavor) // Use props.flavor instead of just flavor
+  emit('select-flavor', props.flavor)
 }
 </script>
 

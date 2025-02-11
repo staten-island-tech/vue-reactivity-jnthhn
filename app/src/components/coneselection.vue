@@ -1,4 +1,3 @@
-// ConeSelection.vue
 <template>
   <div class="card" @click="emitSelection">
     <h2>{{ cone.type }}</h2>
