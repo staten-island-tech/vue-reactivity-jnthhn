@@ -1,16 +1,16 @@
 <template>
   <div class="final-card">
     <h2>Your Ice Cream Creation</h2>
+    <div v-if="flavor" class="detail-item">
+      <h3>Flavor:</h3>
+      <p>{{ flavor.flavor }}</p>
+      <img :src="flavor.image" :alt="flavor.flavor" />
+    </div>
     <div class="ice-cream-details" v-if="cone || flavor || toppings.length">
       <div v-if="cone" class="detail-item">
         <h3>Cone:</h3>
         <p>{{ cone.type }}</p>
         <img :src="cone.image" :alt="cone.type" />
-      </div>
-      <div v-if="flavor" class="detail-item">
-        <h3>Flavor:</h3>
-        <p>{{ flavor.flavor }}</p>
-        <img :src="flavor.image" :alt="flavor.flavor" />
       </div>
       <div v-if="toppings.length" class="detail-item">
         <h3>Toppings:</h3>
