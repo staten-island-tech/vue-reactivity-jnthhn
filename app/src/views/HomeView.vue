@@ -8,7 +8,7 @@
             v-for="cone in cones"
             :key="cone.type"
             :cone="cone"
-            @select-cone="selectCone"
+            :onSelect="selectCone"
           />
         </div>
       </div>
@@ -24,7 +24,7 @@
             v-for="flavor in flavors"
             :key="flavor.flavor"
             :flavor="flavor"
-            @select-flavor="selectFlavor"
+            :onSelect="selectFlavor"
           />
         </div>
       </div>
@@ -36,7 +36,7 @@
             v-for="topping in toppings"
             :key="topping.name"
             :topping="topping"
-            @select-topping="selectTopping"
+            :onSelect="selectTopping"
           />
         </div>
       </div>

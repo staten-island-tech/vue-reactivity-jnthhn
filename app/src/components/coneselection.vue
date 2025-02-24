@@ -1,5 +1,5 @@
 <template>
-  <div class="card" @click="emitSelection">
+  <div class="card" @click="handleClick">
     <h2>{{ cone.type }}</h2>
     <img :src="cone.image" :alt="cone.type" />
   </div>
@@ -8,10 +8,13 @@
 <script setup>
 const props = defineProps({
   cone: Object,
+  onSelect: Function,
 })
-const emit = defineEmits(['select-cone'])
-const emitSelection = () => {
-  emit('select-cone', props.cone)
+
+const handleClick = () => {
+  if (props.onSelect) {
+    props.onSelect(props.cone)
+  }
 }
 </script>
 
